@@ -1,0 +1,167 @@
+:root {
+  --celeste: #0473b6;
+}
+.dashboard {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+}
+.centerDashboard {
+
+}
+.slotsPanelController {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 25vw;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.slotsPanel {
+  height: 100%;
+  width: 30%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.slot {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.slot section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 75%;
+  overflow: hidden;
+}
+.slot section img{
+  width: 100%;
+}
+.slot span {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #00316e;
+}
+.slot span p {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+
+.heroRoleOptions {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.heroRoleOption {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 19.8%;
+  min-width: 160px;
+  border-left: 2px solid var(--celeste);
+  border-bottom: 2px solid var(--celeste);
+  color: var(--celeste);
+  aspect-ratio: 1 / 0.17;
+  transition: 200ms all ease-in-out;
+  font-size: 20px;
+}
+.heroRoleOption:hover {
+  background-color: var(--celeste);
+  color: white;
+}
+
+.heroBannerTable {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-items: center;
+  align-items: center;
+  gap: 5px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+.heroBanner, .heroBannerBlue, .heroBannerRed, .heroBannerSelected {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 1 / 1.5;
+  background-size: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 150ms ease-in-out;
+  flex-shrink: 0;
+}
+.heroBanner:hover {
+  scale: 1.1;
+  box-shadow: 0 0 15px 0 rgb(248, 212, 96);
+  z-index: 10;
+  img{
+    filter: saturate(110%);
+  }
+}
+
+.heroBanner img, .heroBannerBlue img, .heroBannerRed img, .heroBannerSelected img{
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  transition: 150ms ease-in-out;
+  filter: saturate(10%);
+}
+.heroBannerBlue img, .heroBannerRed img, .heroBannerSelected img {
+  filter: saturate(110%);
+}
+
+.heroBanner section, .heroBannerBlue section, .heroBannerRed section, .heroBannerSelected section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  padding-bottom: 15px;
+  gap: 3px;
+  background: linear-gradient(to top, rgba(19, 19, 19, 0.92) 15%, transparent 60%)
+}
+.heroBannerBlue section {
+  background: linear-gradient(to top, rgba(4, 20, 63, 0.92) 15%, transparent 60%)
+}
+.heroBannerRed section {
+  background: linear-gradient(to top, rgba(91, 14, 14, 0.92) 15%, transparent 60%)
+}
+
+.heroBanner p, .heroBannerBlue p, .heroBannerRed p, .heroBannerSelected p {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.heroBanner h1, .heroBannerBlue h1, .heroBannerRed h1, .heroBannerSelected h1 {
+  color: #ffb407;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
